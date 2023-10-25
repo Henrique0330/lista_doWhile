@@ -7,10 +7,17 @@
 
     //Entrada
 
+    let nota = parseFloat(prompt(`Insira um nota entre 0 e 10:`));
 
     //Processamento
 
+    while (nota < 0 || nota > 10 || isNaN(nota)) {
+        alert(`Valor inválido, insira outro número`)
+        nota = parseFloat(prompt(`Insira um nota entre 0 e 10:`));
+    }
 
     //Saída
+
+    alert(`O número inserido foi ${nota}`)
 
 </script>
