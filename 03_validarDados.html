@@ -12,13 +12,33 @@
 
     //Entrada
 
-    let nome = prompt(`Insira um nome`)
-    while (khf) {
-        
-    }
+    let nome = '';
+    let Idade = '';
+    let salario = '';
+    let Sexo = '';
+    let EstadoCivil = '';
 
     //Processamento
 
+    do {
+        nome = prompt(`Insira seu usuário (Maior que 3 caracteres)`)
+    } while (nome <= 3);
+
+    do {
+        Idade = prompt(`Insira sua idade`)
+    } while (Idade >= 0 || Idade <= 150 );
+
+    do {
+        salario = prompt(`Insira seu salário`)
+    } while (salario > 0);
+
+    do {
+        nome = prompt(`Insira seu usuário (Maior que 3 caracteres)`)
+    } while (nome <= 3);
+
+    do {
+        nome = prompt(`Insira seu usuário (Maior que 3 caracteres)`)
+    } while (nome <= 3);
 
     //Saída
 

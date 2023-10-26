@@ -7,17 +7,19 @@
 
     //Entrada
 
-    let usuario = prompt(`Insira o nome do usuário:`)
-    let senha = prompt(`Insira uma senha`)
+    let usuario = '';
+    let senha = '';
 
     //Processamento
-    
-    while (kkk)
 
-
+    do {
+        (usuario == senha) ? prompt(`ERROR. Insira um usuário/senha diferente um do outro`) : null
+        usuario = prompt(`Insira um usuário`).trim();
+        senha = prompt(`Insira uma senha`).trim();
+    } while (usuario == senha);
 
     //Saída
 
-    alert(`usuário: ${usuario}  \n senha: ${senha}`)
+    alert(`Usuário: ${usuario} \n Senha: ${senha}`)
 
 </script>
