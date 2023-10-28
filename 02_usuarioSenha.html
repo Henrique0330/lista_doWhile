@@ -13,9 +13,11 @@
     //Processamento
 
     do {
-        (usuario == senha) ? prompt(`ERROR. Insira um usuário/senha diferente um do outro`) : null
-        usuario = prompt(`Insira um usuário`).trim();
-        senha = prompt(`Insira uma senha`).trim();
+        usuario = prompt(`Insira o usuário:`)
+        senha = prompt(`Insira uma senha:`)
+        if (usuario == senha) {
+            alert(`ERROR. Insira uma senha/usuário diferente uma da outra!`)
+        }
     } while (usuario == senha);
 
     //Saída

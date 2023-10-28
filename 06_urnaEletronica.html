@@ -20,13 +20,29 @@
     */
 
     //Entrada
-
+    let j = 0;
+    let m = 0;
+    let nulo = 0;
+    let branco = 0;
+    let votos = 0;
 
     //Processamento
 
+    do {
+        votos = Number(prompt("Insira seu votos: \n 1 - Joãozinho \n 2 - Mariazinha \n 3 - Nulo \n 4 - Branco \n (Insira 0 para finalizar a votação!);"));
+        (votos == 1) ? j++ :
+            (votos == 2) ? m++ :
+                (votos == 3) ? nulo++ :
+                    (votos == 4) ? branco++ :
+                        (votos == 0) ? "" :
+                            alert(`Candidato inválido!`);
+    } while (votos != 0);
+
+    let p = (j + m + nulo + branco) / 100;
+    let Vencedor = (j > m) ? j : (m > j) ? m : empate;
+
+    alert(`Resultado da votação: \nJoãozinho: ${j} votos; \nMariazinha: ${m} votos; \nVotos nulos: ${(nulo / p).toFixed(2).replace(".", ",")}% \nVotos em branco: ${(branco / p).toFixed(2).replace(".", ",")}% \nVencedor: ${Vencedor}`);
 
     //Saída
 
 </script>
-
-

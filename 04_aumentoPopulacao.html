@@ -7,10 +7,21 @@
 
     //Entrada
 
+    let pA = 80000;
+    let pB = 200000;
+    let total = 0;
 
     //Processamento
 
+    do {
+        pA = pA * 1.03
+        pB = pB * 1.015
+        total++
+
+    } while (pA == pB || pA < pB);
 
     //Saída
+
+    alert(`Serão necessários: ${total} anos \n População A: ${pA.toFixed(0)} habitantes \n População B: ${pB.toFixed(0)} habitantes.`)
 
 </script>

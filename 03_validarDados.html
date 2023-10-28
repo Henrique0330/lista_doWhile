@@ -13,7 +13,7 @@
     //Entrada
 
     let nome = '';
-    let Idade = '';
+    let Idade = 0;
     let salario = '';
     let Sexo = '';
     let EstadoCivil = '';
@@ -21,25 +21,27 @@
     //Processamento
 
     do {
-        nome = prompt(`Insira seu usuário (Maior que 3 caracteres)`)
-    } while (nome <= 3);
+        nome = prompt(`Insira seu usuário (Maior que 3 caracteres):`)
+    } while (nome.length < 3);
 
     do {
-        Idade = prompt(`Insira sua idade`)
-    } while (Idade >= 0 || Idade <= 150 );
+        Idade = prompt(`Insira sua idade:`)
+    } while (Idade < 0 && Idade > 150 );
 
     do {
-        salario = prompt(`Insira seu salário`)
-    } while (salario > 0);
+        salario = prompt(`Insira seu salário:`)
+    } while (salario < 0);
 
     do {
-        nome = prompt(`Insira seu usuário (Maior que 3 caracteres)`)
-    } while (nome <= 3);
+        Sexo = prompt(`Insira seu gênero: (M / F)`).toUpperCase()
+    } while (Sexo != 'F' &  Sexo != 'M');
 
     do {
-        nome = prompt(`Insira seu usuário (Maior que 3 caracteres)`)
-    } while (nome <= 3);
+        EstadoCivil = prompt(`Insira seu estado civil no momento: S-solteiro(a), C-casado(a), V-viúvo(a), D-divorciado(a)) `).toUpperCase()
+    } while (EstadoCivil != 'S' &  EstadoCivil != 'C' & EstadoCivil != 'V' &  EstadoCivil != 'D');
 
     //Saída
+
+    alert(`Suas informações: \n Nome: ${nome} \n Idade: ${Idade} \n Salário: ${salario} \n Sexo: ${Sexo} \n Estado Civil: ${EstadoCivil}`)
 
 </script>

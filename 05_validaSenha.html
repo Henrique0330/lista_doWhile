@@ -7,9 +7,22 @@
 
     //Entrada
 
+    let senha = '';
+    let cSenha = '';
 
     //Processamento
 
+    do {
+        senha = prompt(`Insira uma senha com apenas 4 números - (Apenas números inteiros!):`).replace(",", ".").trim()
+        cSenha = prompt(`Confirme sua senha:)`).trim()
+
+        if (senha == cSenha) {
+            alert(`Senha correta!`)
+        }
+        else {
+            alert(`Senha incorreta!`)
+        }
+    } while (senha != cSenha);
 
     //Saída
 
