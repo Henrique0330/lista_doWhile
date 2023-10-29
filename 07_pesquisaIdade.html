@@ -14,19 +14,29 @@
 
     //Entrada
 
-    let idade = 0;
-    let sexo = 0;
-    let salario = 0;
+    let idade;
+    let idadeLista = [];
+    let salario;
+    let salarioLista = [];
+    let sexo;
+    let sexoLista = [];
+    let totalF = 0;
 
     //Processamento
 
     do {
-        idade = parseFloat(prompt(``))
-
-    } while (pesquisa != 0);
+        idade = parseFloat(prompt("Informe sua idade: - (Insira um número negativo para finalizar a pesquisa!)"));
+        if (idade < 0) break
+        idadeLista.push(idade);
+        salario = parseFloat(prompt("Informe seu salário:"));
+        salarioLista.push(salario);
+        sexo = prompt("Informe qual é seu sexo (F / M):").toUpperCase();
+        sexoLista.push(sexo)
+        if (sexo == "F") {
+            totalF++
+        }
+    } while (true);
 
     //Saída
-
-    alert(`Joãozinho: ${j} \nMariazinha:${m} \npesquisa nulos: ${nulo} \npesquisa em branco: ${branco} \nPorcentagem de pesquisa nulos: \nPorcentagem de pesquisa brancos $`)
-
+    alert(`Média do salário: ${salarioLista.reduce((soma, valor) => soma + valor, 0) / salarioLista.length} \nMaior idade: ${Math.max(...idadeLista)} \nMenor idade: ${Math.min(...idadeLista)} \nTotal de mulheres na região: ${totalF} \npPessoa que possui o menor salário é do sexo: ${sexoLista[salarioLista.indexOf(Math.min(...salarioLista))]} \nIdade da pessoa: ${idadeLista[salarioLista.indexOf(Math.min(...salarioLista))]}`)
 </script>
